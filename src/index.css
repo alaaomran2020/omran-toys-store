@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Tajawal", "Cairo", "Be Vietnam Pro", system-ui, sans-serif;
+  --font-display: "Cairo", "Plus Jakarta Sans", system-ui, sans-serif;
+  
+  --color-brand-bg: #0b0f17;
+  --color-brand-surface: #161d2a;
+  --color-brand-orange: #ff5e00;
+  --color-brand-mint: #00f5d4;
+  
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f17;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c2028;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5e00;
+}
+
+/* Prevent layout shifts */
+html, body {
+  scroll-behavior: smooth;
+  background-color: #0b0f17;
+  color: #dfe2ee;
+}
